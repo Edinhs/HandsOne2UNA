@@ -10,11 +10,10 @@ public class EntregaAtividade2 {
 			System.out.println("\n----------------------//----------------------");
 			System.out.println("\nEntrega 2 - Hands On: Estrutura de Controle");
 			System.out.println("\n----EXERCÍCIOS----");
-			System.out.println("1. Par ou ímpar");
-			System.out.println("2. Maior de dois");
-			System.out.println("3. Calculadora com menu");
-			System.out.println("4. Validação de entrada");
-			System.out.println("5. Sentinela (parada no 0)");
+			System.out.println("1. Cara Feliz");
+			System.out.println("2. Distância entre os dois pontos");
+			System.out.println("3. Contar letras, espaços, números e outros caracteres");
+			System.out.println("4. Questão de múltipla escolh");
 			System.out.println("\n==== PARA SAIR ====");
 			System.out.println("0. Sair");
 			System.out.print("\nEscolha um exercício: ");
@@ -104,8 +103,40 @@ public class EntregaAtividade2 {
 				break;
 
 			case 4:
-				
-				
+				int tentativas = 0;
+				char resp;
+
+				do {
+
+					tentativas++;
+					
+					System.out.println("====QUESTÃO MULTIPLA ESCOLHA====\n");
+
+					System.out.println("O que é Inteligência Artificial (IA)?");
+					System.out.println("a) Um tipo de hardware usado em computadores");
+					System.out.println("b) Um sistema que permite máquinas aprenderem e tomarem decisões");
+					System.out.println("c) Um programa usado apenas para jogos");
+					System.out.println("d) Um vírus de computador avançado");
+					System.out.println("e) Um tipo de linguagem de programação");
+
+					resp = sc.next().charAt(0);
+
+					switch (resp) {
+					case 'b':
+						System.out.println("Resposta correta");
+						System.out.println("Acertou na tentativa: " + tentativas);
+						break;
+					default:
+						System.out.println("Resposta incorreta");
+					}
+
+				} while (resp != 'b' && tentativas < 3);
+
+				if (resp != 'b') {
+					System.out.println("Resposta incorreta nas 3 tentativas");
+				}
+
+				sc.close();
 
 				break;
 
